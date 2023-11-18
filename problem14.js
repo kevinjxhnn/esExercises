@@ -1,11 +1,7 @@
-// Iterate through all keys of an object using Object.keys
+// Use the for..of loop to iterate through all values in an array
 
-let person = {
-    name: 'Harry Potter',
-    location: 'London', 
-    school: 'Hogwarts'
-}
+let arr = [1, 2, 3, 4, 5]
 
-for(let key of Object.keys(person)){
-    console.log(key)
+for(let num of arr) {
+    console.log(num)
 }

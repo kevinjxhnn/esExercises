@@ -1,4 +1,4 @@
-// Iterate through all values of an object using Object.values
+// Iterate through all keys of an object using Object.keys
 
 let person = {
     name: 'Harry Potter',
@@ -6,6 +6,6 @@ let person = {
     school: 'Hogwarts'
 }
 
-for(let key of Object.values(person)){
+for(let key of Object.keys(person)){
     console.log(key)
 }

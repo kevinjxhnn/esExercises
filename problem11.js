@@ -1,14 +1,15 @@
-/* Create a function sum that takes any number of numbers as arguments 
-and calculates the sum of the input numbers using the rest parameter syntax */
+// Show an example where enhanced object literals is used.
 
-function sumAny(...numbers) {
-  const sum = numbers.reduce( (acc, num) => {
-    acc = acc + num;
+let firstName = "Kevin"
+let lastName = "John"
 
-    return acc
-  }, 0);
 
-  console.log(sum)
+let person = {
+    firstName,
+    lastName,
+    greet: () => {
+        console.log(`Welcome ${firstName} ${lastName}`)
+    }
 }
 
-module.exports = {sumAny}
+person.greet()

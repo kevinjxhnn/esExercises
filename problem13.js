@@ -1,7 +1,8 @@
-// Use the for..of loop to iterate through all values in an array
+/* Use the spread syntax to expand an array of numbers and pass the 
+elements of the array as arguments to the sum function created in the previous example */
 
-let arr = [1, 2, 3, 4, 5]
+const { sumAny } = require("./problem12");
 
-for(let num of arr) {
-    console.log(num)
-}
+const arr = [1, 2, 3, 4, 5, 6, 7];
+
+sumAny(...arr);

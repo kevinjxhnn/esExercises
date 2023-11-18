@@ -1,15 +1,18 @@
-// Show an example where enhanced object literals is used.
+// Show an example where a function argument which is an object is destructured inside the parantheses of the function
 
-let firstName = "Kevin"
-let lastName = "John"
-
-
-let person = {
-    firstName,
-    lastName,
-    greet: () => {
-        console.log(`Welcome ${firstName} ${lastName}`)
-    }
+const destructureObjectName = ({name}) => {
+    console.log(`My name is ${name} `)
 }
 
-person.greet()
+
+const destructureObjectNameLoc= ({name, location}) => {
+    console.log(`My name is ${name} and I live in ${location}`)
+}
+
+let person = {
+    name: 'Harry Potter',
+    location: 'London'
+}
+
+destructureObjectName(person)
+destructureObjectNameLoc(person)

@@ -1,8 +1,14 @@
-/* Use the spread syntax to expand an array of numbers and pass the 
-elements of the array as arguments to the sum function created in the previous example */
+/* Create a function sum that takes any number of numbers as arguments 
+and calculates the sum of the input numbers using the rest parameter syntax */
 
-const { sumAny } = require("./problem11");
+function sumAny(...numbers) {
+  const sum = numbers.reduce( (acc, num) => {
+    acc = acc + num;
 
-const arr = [1, 2, 3, 4, 5, 6, 7];
+    return acc
+  }, 0);
 
-sumAny(...arr);
+  console.log(sum)
+}
+
+module.exports = {sumAny}
